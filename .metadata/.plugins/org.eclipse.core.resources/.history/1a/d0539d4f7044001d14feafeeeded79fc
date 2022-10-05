@@ -1,0 +1,71 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import kr.co.ezen.beans.helloENG;
+import kr.co.ezen.beans.helloKOR;
+import kr.co.ezen.beans2.HelloENG2;
+import kr.co.ezen.beans2.HelloKOR2;
+import kr.co.ezen.beans3.HelloENG3;
+import kr.co.ezen.beans3.HelloKOR3;
+
+public abstract class mainClass{
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("kr/co/ezen/config/beans.xml");
+		
+		/*
+		 * 문제1> 안녕하세요라는 메세지를 영문버전과 한글 버전으로 출력하세요.
+		 * 영문> Hello~
+		 * 한글> 안녕하세요~
+		 * 
+		 * 문제2> interface를 적용하여 출력하세요.
+		 * 
+		 * 문제3> abstract class를 적용하여 출력하세요.
+		 */
+		helloKOR hKOR = new helloKOR();
+		hKOR.hello();
+		
+		helloENG.hello();
+		helloKOR.hello();
+		
+		//인터페이스 적용 로직
+		HelloENG2 hENG2 = new HelloENG2();
+		callHelloENG(hENG2);
+		
+		HelloKOR2 hKOR2 = new HelloKOR2();
+		callHelloKOR(hKOR2);
+		
+		context.close();
+		
+		//abstract class 적용
+		HelloENG3 hENG3 = new HelloENG3();
+		callHelloKOR(hENG3);
+		
+		HelloKOR3 hKOR3 = new HelloKOR3();
+		callHelloKOR(hKOR3);
+		
+	}
+	
+	private static void callHelloKOR(HelloKOR3 hKOR3) {
+		hKOR3.sayHI();
+		
+	}
+
+	private static void callHelloKOR(HelloENG3 hENG3) {
+		hENG3.sayHI();
+		
+	}
+
+	protected static void callHelloKOR(HelloKOR2 hKOR2) {
+		hKOR2.sayHello();
+		
+	}
+
+	protected static void callHelloENG(HelloENG2 hENG2) {
+		hENG2.sayHello();
+		
+	}
+
+
+}

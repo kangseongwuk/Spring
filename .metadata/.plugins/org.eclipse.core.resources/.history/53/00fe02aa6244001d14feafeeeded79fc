@@ -1,0 +1,7 @@
+package kr.co.ezen.beans2;
+
+public class helloENG implements helloworld{
+	public static void hello() {
+		System.out.println("Hello~");
+	}
+}

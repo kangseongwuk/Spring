@@ -3,6 +3,10 @@
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
 			<item value="D:\Spring-workspace"/>
+			<item value="D:\Spring-workspace\springSample3_ioC\src\main\java\kr\co\ezen\main\mainClass.java"/>
+			<item value="D:\Spring-workspace\springSample3_ioC"/>
+			<item value="D:\Spring-workspace\springSample2_insa"/>
+			<item value="D:\Spring-workspace\springSample2_insa\src\main\java\kr\co\ezen\config\beans.xml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -49,8 +53,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="SpringSample"/>
-			<item value="SpringSampleProject"/>
+			<item value="springSample4_BeanLikeCycle"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -75,5 +78,26 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="springSample4_BeanLikeCycle"/>
+			<item value="springSample2_insa"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="springSample4_BeanLikeCycle"/>
+			<item value="springSample2_insa"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="529"/>
+		<item key="x" value="720"/>
+		<item key="y" value="76"/>
 	</section>
 </section>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- jsp에서 usebean, parameter-->
+	<!-- 여기서 id는 java에서 오브젝트-->
+	<!-- 의존성 주입 ( Dependcy Injection ) -->
+	<!-- single type, getBean()을 호출하기 전에는 객체가 생성되지 않는다. -->
+	<bean id="helloENG3" class="kr.co.ezen.beans.HelloENG3"></bean>
+	<bean id="helloKOR3" class="kr.co.ezen.beans.HelloKOR3"></bean>
+	<bean id="testBean" class="kr.co.ezen.beans.testBean"/>
+	<bean id="testBean2" class="kr.co.ezen.beans.testBean"/>
+	<bean id="testBean3" class="kr.co.ezen.beans.HelloENG3"/>
+	<bean id="sum" class="kr.co.ezen.beans.testBean2"/>
+</beans>

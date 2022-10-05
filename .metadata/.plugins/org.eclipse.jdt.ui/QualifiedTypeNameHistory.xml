@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans.helloENG"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans.helloKOR"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.main.hellointerface"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.StaticApplicationContext"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans2.helloENG"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans2.helloKOR2"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans2.helloENG2"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans2.HelloWorld"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans3.HelloENG3"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans3.HelloKOR3"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans.testBean"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.xml.XmlBeanFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.ClassPathResource"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans.HelloENG3"/>
+    <fullyQualifiedTypeName name="kr.co.ezen.beans.testBean2"/>
+</qualifiedTypeNameHistroy>

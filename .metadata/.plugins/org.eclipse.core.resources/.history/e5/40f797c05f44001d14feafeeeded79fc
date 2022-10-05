@@ -1,0 +1,14 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("kr/co/ezen/config/beans.xml");
+		
+		context.close();
+		
+	}
+
+}

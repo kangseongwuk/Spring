@@ -1,0 +1,12 @@
+package kr.co.ezen.main;
+
+import kr.co.ezen.beans2.helloENG;
+
+public class mainClass2 {
+
+	public static void main(String[] args) {
+		
+		helloENG.
+	}
+
+}

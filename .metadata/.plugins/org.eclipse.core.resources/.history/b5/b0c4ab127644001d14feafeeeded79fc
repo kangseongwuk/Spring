@@ -1,0 +1,42 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import kr.co.ezen.beans.HelloENG3;
+import kr.co.ezen.beans.HelloKOR3;
+
+
+public abstract class mainClass{
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("kr/co/ezen/config/beans.xml");
+		
+		/*
+		 * 문제1> abstract class를 적용 안녕하세요라는 메세지를 영문버전과 한글 버전으로 출력하세요.
+		 * 영문> Hello~
+		 * 한글> 안녕하세요~
+		 * 
+		 */
+
+		//abstract class 적용
+		HelloENG3 hENG3 = new HelloENG3();
+		callHelloKOR(hENG3);
+		
+		HelloKOR3 hKOR3 = new HelloKOR3();
+		callHelloKOR(hKOR3);
+		
+	}
+	
+	private static void callHelloKOR(HelloKOR3 hKOR3) {
+		hKOR3.sayHI();
+		
+	}
+
+	private static void callHelloKOR(HelloENG3 hENG3) {
+		hENG3.sayHI();
+		
+	}
+
+
+
+}

@@ -1,0 +1,33 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import kr.co.ezen.beans.helloENG;
+import kr.co.ezen.beans.helloKOR;
+
+public class mainClass implements hellointerface{
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("kr/co/ezen/config/beans.xml");
+		
+		/*
+		 * 문제> 안녕하세요라는 메세지를 영문버전과 한글 버전으로 출력하세요.
+		 * 영문> Hello~
+		 * 한글> 안녕하세요~
+		 */
+		helloKOR hKOR = new helloKOR();
+		hKOR.hello();
+		
+		helloENG.hello();
+		helloKOR.hello();
+		
+		@Override
+		interHello(){
+			
+		}
+		
+		context.close();
+		
+	}
+
+}
