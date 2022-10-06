@@ -1,0 +1,11 @@
+package snippet;
+
+public class Snippet {
+	(default package)
+	kr.co.ezen.beans
+	kr.co.ezen.beans2
+	kr.co.ezen.beans3
+	kr.co.ezen.config
+	kr.co.ezen.main
+}
+

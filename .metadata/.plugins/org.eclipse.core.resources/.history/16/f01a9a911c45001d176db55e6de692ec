@@ -1,0 +1,13 @@
+package kr.co.ezen.beans;
+
+public class TestBean3 {
+	public void a(){
+		System.out.println("생성자입니다.");
+	}
+	
+	public double div(int x, int y) {
+		double sum = x / y;
+		
+		return sum;
+	}
+}

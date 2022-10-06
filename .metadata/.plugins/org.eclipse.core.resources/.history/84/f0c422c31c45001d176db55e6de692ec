@@ -1,0 +1,51 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import kr.co.ezen.beans.TestBean;
+import kr.co.ezen.beans.TestBean2;
+import kr.co.ezen.beans.TestBean3;
+
+
+public abstract class mainClass{
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("kr/co/ezen/config/beans.xml");
+		
+		TestBean t1 = new TestBean();
+		int result = t1.Adder(300,200);
+		System.out.println("덧셈의 합계 : " + result);
+		System.out.println(t1);
+		
+		TestBean t2 = context.getBean("tb1", TestBean.class);
+		int result2 = t2.Adder(300,200);
+		System.out.println("덧셈의 합계 : " + result2);
+		System.out.println(t2);
+	
+		TestBean t3 = context.getBean("tb1", TestBean.class);
+		int result3 = t3.Adder(300,200);
+		System.out.println("덧셈의 합계 : " + result3);
+		System.out.println(t3);
+		
+		TestBean t4 = context.getBean("tb2", TestBean.class);
+		int result4 = t4.Adder(300,200);
+		System.out.println("덧셈의 합계 : " + result4);
+		System.out.println(t4);
+		
+		TestBean2 t5 = context.getBean("tb3", TestBean2.class);
+		int result5 = t5.multi(300,200);
+		System.out.println("곱셉의 값 : " + result5);
+		System.out.println(t5);
+		
+		TestBean2 t6 = context.getBean("tb3", TestBean2.class);
+		int result6 = t6.multi(300,200);
+		System.out.println("곱셉의 값 : " + result6);
+		System.out.println(t6);
+		
+		TestBean3 t7 = context.getBean("tb4", TestBean3.class);
+		double result7 = t7.div(300.0,12.0);
+		System.out.println("나눗셈 값 : " + result7);
+		System.out.println(t7);
+		
+	}
+}

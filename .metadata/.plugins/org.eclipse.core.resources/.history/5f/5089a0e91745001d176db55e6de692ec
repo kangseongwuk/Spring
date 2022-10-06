@@ -1,0 +1,21 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import kr.co.ezen.beans.helloENG;
+import kr.co.ezen.beans.helloKOR;
+import kr.co.ezen.beans2.HelloENG2;
+import kr.co.ezen.beans2.HelloKOR2;
+import kr.co.ezen.beans3.HelloENG3;
+import kr.co.ezen.beans3.HelloKOR3;
+
+public abstract class mainClass{
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("kr/co/ezen/config/beans.xml");
+	
+		TestBean t1 = context.getBean("tb1", TestBean.class);
+		int result = t1.Adder(300,200);
+		System.out.println("덧셈의 합계 : " + result);
+	}
+}

@@ -1,0 +1,33 @@
+package kr.co.ezen.beans;
+
+public class TestBean3 {
+	public void a(){
+		System.out.println("생성자입니다.");
+	}
+	
+	public void test_init() {
+		System.out.println("생성자호출이후 자동으로 생성됩니다.");
+		
+	}
+	
+	public void testBean_destroy() {
+		System.out.println("프로그램이 종료됩니다. bye~");
+	}
+	
+	public int Adder(int x, int y) {
+		int sum = x + y ;
+		return sum;
+	}
+	
+	public int multi(int x, int y) {
+		int sum = x * y;
+		
+		return sum;
+	}
+	
+	public double div(double x, double y) {
+		double sum = x / y;
+		
+		return sum;
+	}
+}

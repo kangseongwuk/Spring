@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-init-method="default_init" default-destroy-method="testBean_destroy">
+	
+	<!-- jsp에서 usebean, parameter-->
+	<!-- 여기서 id는 java에서 오브젝트-->
+	<!-- 의존성 주입 ( Dependcy Injection ) -->
+	<!-- single type, getBean()을 호출하기 전에는 객체가 생성되지 않는다. -->
+
+<!-- prototype -->
+	
+<!-- 프로토 타입은 안됌 <bean id="t3" class="kr.co.ezen.beans.TestBean3" scope="prototype"
+		init-method="test_init" destroy-method="testBean_destroy"/>-->
+	<bean id="t3" class="kr.co.ezen.beans.TestBean3" lazy-init="true"
+		init-method="test_init" destroy-method="default_destroy"/>
+	
+<!-- default -->	
+	<bean id="t4" class="kr.co.ezen.beans.TestBean4" lazy-init="true"
+			init-method="TestBean3_init"/>
+	<bean id="t5" class="kr.co.ezen.beans.TestBean4" lazy-init="true"
+			init-method="TestBean4_init"/>
+	<bean id="t6" class="kr.co.ezen.processor" lazy-init="true"/>
+	
+</beans>
