@@ -1,0 +1,10 @@
+package kr.co.ezen.beans;
+
+import java.util.List;
+
+public class TestBean {
+	
+	private List<String> list1;
+	
+	
+}

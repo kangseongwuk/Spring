@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 의존성 주입(Dependency Injection) -->
+<!-- single type, getBean()을 호출하기 전에는 객체가 생성되지 않습니다. -->
+		
+	<!-- <bean id="tb3" class="kr.co.ezen.beans.TestBean3" scope="prototype" 
+			init-method="testBean_init" destroy-method="testBean_destroy"/>-->
+	
+	<bean id="tb1" class="kr.co.ezen.beans.TestBean"/>
+			
+									
+</beans>

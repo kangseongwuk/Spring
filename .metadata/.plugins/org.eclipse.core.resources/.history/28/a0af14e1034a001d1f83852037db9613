@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="tb3" class="kr.co.ezen.beans.TestBean3" lazy-init="true">
+		<property name="map1">
+			<props>
+				<props key = "a1" value="반갑습니다.1"/>
+				<props key = "a2" value="반갑습니다.2"/>
+				<props key = "a3" value="1000" value-type="int"/>
+				<props key = "a4" value="2000" value-type="int"/>
+				<props key = "a5" value="1000.11" value-type="double"/>
+				<props key = "a6" value="2000.22" value-type="double"/>
+			</props>
+		</property>
+	</bean>
+	
+
+			
+									
+</beans>

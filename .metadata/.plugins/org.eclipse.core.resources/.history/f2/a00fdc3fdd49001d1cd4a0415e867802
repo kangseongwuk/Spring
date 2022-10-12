@@ -1,0 +1,42 @@
+package kr.co.ezen.beans;
+
+public class TestBean {
+
+	private int data1; //필드변수는 자동 초기화가 됨 0 => 10으로 초기화
+	private double data2;
+	private String data3;
+	
+	public TestBean() {
+		//default Constructor 디폴트 생성자
+		System.out.println("기본생성자 입니다.");
+		
+		this.data1 = 10;
+	}
+
+	public int getData1() {
+		return data1;
+	}
+
+	public void setData1(int data1) {
+		this.data1 = data1;
+	}
+
+	public double getData2() {
+		return data2;
+	}
+
+	public void setData2(double data2) {
+		this.data2 = data2;
+	}
+
+	public String getData3() {
+		return data3;
+	}
+
+	public void setData3(String data4) {
+		this.data3 = data4;
+	}
+
+
+	
+}

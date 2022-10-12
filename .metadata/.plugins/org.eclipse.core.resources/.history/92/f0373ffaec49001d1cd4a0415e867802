@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="springSample9_CollectionDI">
+        <property name="context-root" value="springSample9_CollectionDI"/>
+        <property name="java-output-path" value="/springSample9_CollectionDI/build/classes"/>
+    </wb-module>
+</project-modules>

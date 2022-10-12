@@ -8,15 +8,29 @@
 </head>
 <body>
 	<h1>Hello Spring MVC Java</h1>
-	<img src="image/bmwmodel_205.png"/>
+	<img src="image/bmwmodel_205.png"/><br>
 	<a href="test1">test1</a>
 	<a href="test2">test2 post</a>
+	<hr>
+	<form action="test2" method="get">
+		<button type="submit">test2 get</button>
+	</form>
 	<form action="test2" method="post">
 		<button type="submit">test2 post</button>
 	</form>
-	<form action="test3" method="get">
-		<button type="submit">test2 get</button>
+	
+		<form action="test3" method="get">
+		<button type="submit">test3 get</button>
 	</form>
+	<form action="test3" method="post">
+		<button type="submit">test3 post</button>
+	</form>
+	<hr>
+	<a href="test4">test4 get</a>
+	<form action="test4" method="post">
+		<button type="submit">test4 post</button>
+	</form>
+	
 
 </body>
 </html>

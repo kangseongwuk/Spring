@@ -1,0 +1,11 @@
+package kr.co.ezen.beans;
+
+import java.util.List;
+
+public class TestBean2 {
+	
+	private set<String> set1;
+	private set<Integer> set2;
+	private set<Double> set3;
+
+}

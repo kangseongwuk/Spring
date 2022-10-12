@@ -1,0 +1,12 @@
+package kr.co.ezen.beans;
+
+import java.util.Set;
+
+public class TestBean3 {
+	
+	private Map<String, Object> map1;
+	private Set<Integer> map2;
+	private Set<Double> map3;
+	
+
+}

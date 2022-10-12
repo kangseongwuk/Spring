@@ -81,6 +81,10 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="springSample9_CollectionDI"/>
+			<item value="springSample8_ConstructorDI"/>
+			<item value="springSample7_methodDI"/>
+			<item value="WebSpringSample3_parameter"/>
 			<item value="WebSpringSample2_GetPost"/>
 			<item value="springSample4_BeanLikeCycle"/>
 			<item value="springSample2_insa"/>
@@ -88,6 +92,10 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="springSample9_CollectionDI"/>
+			<item value="springSample8_ConstructorDI"/>
+			<item value="springSample7_methodDI"/>
+			<item value="WebSpringSample3_parameter"/>
 			<item value="WebSpringSample2_GetPost"/>
 			<item value="springSample4_BeanLikeCycle"/>
 			<item value="springSample2_insa"/>

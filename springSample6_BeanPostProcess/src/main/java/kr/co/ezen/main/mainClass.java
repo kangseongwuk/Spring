@@ -1,3 +1,4 @@
+
 package kr.co.ezen.main;
 
 import java.util.Scanner;
