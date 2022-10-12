@@ -1,0 +1,92 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	if(document.getElementById("data1").checked){
+		document.getElementByID("data1_hidden").disabled=true;
+	}
+	if(document.getElementById("data2").checked){
+		document.getElementByID("data2_hidden").disabled=true;
+	}
+	if(document.getElementById("data3").checked){
+		document.getElementByID("data3_hidden").disabled=true;
+	}
+	if(document.getElementById("data4").checked){
+		document.getElementByID("data4_hidden").disabled=true;
+	}
+	if(document.getElementById("data5").checked){
+		document.getElementByID("data5_hidden").disabled=true;
+	}
+</script>
+</head>
+<body>
+	<h1>Hello Spring MVC Java</h1>
+	<img src="image/bmwmodel_205.png"/><br>
+	<a href="test1?data1=100&data2=200">test1 get방식</a><br>
+	
+	<form action="result2">
+		<label>data1 : <input type="text" name=data1></label>
+		<label>data2 : <input type="text" name=data2></label>
+		<label><input type="submit" value="제출" ></label>
+	</form>
+	
+	<hr>
+	<p>내가 한 방법</p>
+	<form action="result3" method="get">
+	<input type="checkbox" value="10" name=data1>10
+	<input type="hidden" value="0" name=data1 id=data1_hidden/>
+	<input type="checkbox" value="20" name=data2>20
+	<input type="hidden" value="0" name=data2 id=data2_hidden/>
+	<input type="checkbox" value="30" name=data3>30
+	<input type="hidden" value="0" name=data3 id=data3_hidden/>
+	<input type="checkbox" value="40" name=data4>40
+	<input type="hidden" value="0" name=data4 id=data4_hidden/>
+	<input type="checkbox" value="50" name=data5>50
+	<input type="hidden" value="0" name=data5 id=data5_hidden/>
+
+	<input type="submit" value="제출">
+	</form>
+</body>
+</html>
+
+<!-- 
+.요청 방식 지정하기
+
+Spring MVC 는 요청 주소별로 메서드를 정의할 수도 있지만 같은 요청 주소에서 요청 방식에 따라 메서드를 정의할 수도 있습니다.
+GET, POST, PUT, DELELTE, PATCH 에 대해 처리할 수 있습니다.
+
+@RequestMapping
+RequestMapping 어노테이션은 요청 주소 셋팅 뿐만 아니라 요청 방식도 설정할 수 있습니다.
+
+@RequestMapping(value = "/test1", method = RequestMethod.GET)
+public String test1() {
+	return "test1";
+}
+
+요청 어노테이션
+
+RequestMapping 대신 요청별로 제공되는 어노테이션을 사용할 수도 있습니다.
+@GetMapping("/test4")
+public String test4() {
+	return "test4";
+}
+
+@PostMapping("/test5")
+public String test5() {
+	return "test5";
+}
+
+
+동시에 설정하기
+
+RequestMapping은 요청 방식들을 동시에 설정할 수 있습니다.
+
+@RequestMapping(value = "/test7", method = {RequestMethod.GET, RequestMethod.POST})
+public String test7() {
+	return "test7";
+}
+ -->

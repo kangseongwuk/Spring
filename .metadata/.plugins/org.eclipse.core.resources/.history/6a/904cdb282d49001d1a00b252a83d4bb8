@@ -1,0 +1,184 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	if(document.getElementById("data1").checked){
+		document.getElementByID("data1_hidden").disabled=true;
+	}
+	if(document.getElementById("data2").checked){
+		document.getElementByID("data2_hidden").disabled=true;
+	}
+	if(document.getElementById("data3").checked){
+		document.getElementByID("data3_hidden").disabled=true;
+	}
+	if(document.getElementById("data4").checked){
+		document.getElementByID("data4_hidden").disabled=true;
+	}
+	if(document.getElementById("data5").checked){
+		document.getElementByID("data5_hidden").disabled=true;
+	}
+</script>
+</head>
+<body>
+	<h1>Hello Spring MVC Java</h1>
+	<img src="image/bmwmodel_205.png"/><br>
+	<a href="test1?data1=100&data2=200">test1 get방식</a><br>
+	
+	<form action="result2">
+		<label>data1 : <input type="text" name=data1></label>
+		<label>data2 : <input type="text" name=data2></label>
+		<label><input type="submit" value="제출" ></label>
+	</form>
+	
+	<hr>
+	<p>내가 한 방법</p>
+	<form action="result3" method="get">
+	<input type="checkbox" value="10" name=data1>10
+	<input type="hidden" value="0" name=data1 id=data1_hidden/>
+	<input type="checkbox" value="20" name=data2>20
+	<input type="hidden" value="0" name=data2 id=data2_hidden/>
+	<input type="checkbox" value="30" name=data3>30
+	<input type="hidden" value="0" name=data3 id=data3_hidden/>
+	<input type="checkbox" value="40" name=data4>40
+	<input type="hidden" value="0" name=data4 id=data4_hidden/>
+	<input type="checkbox" value="50" name=data5>50
+	<input type="hidden" value="0" name=data5 id=data5_hidden/>
+	<input type="submit" value="제출">
+	</form>
+	<hr>
+	<p>교수님 방법</p>
+	<form action="result4" method="get">
+	<input type="checkbox" value="10" name=data_3>10
+	<input type="checkbox" value="20" name=data_3>20
+	<input type="checkbox" value="30" name=data_3>30
+	<input type="checkbox" value="40" name=data_3>40
+	<input type="checkbox" value="50" name=data_3>50
+	<input type="submit" value="제출">
+	</form>
+	<hr>
+	<a href="result5?data1=100&data2=200&data3=300&data4=400&data5=500">result5</a>	
+	<hr>
+	<a href="test5/100/200/300/400/500">test5</a>
+	<hr>
+	<a href="test6?data1=100&data2=200&data3=300&data4=400&data5=500">test6</a>	
+	<hr>
+	<a href="test7?data1=100&data2=200&data3=300&data4=400&data5=500">test7</a>	
+	<hr>
+	<a href="test8?data1=100&data2=200&data3=300&data4=400&data5=500">test7</a>	
+	
+	
+</body>
+</html>
+
+<!-- 
+.요청 방식 지정하기
+
+Spring MVC 는 요청 주소별로 메서드를 정의할 수도 있지만 같은 요청 주소에서 요청 방식에 따라 메서드를 정의할 수도 있습니다.
+GET, POST, PUT, DELELTE, PATCH 에 대해 처리할 수 있습니다.
+
+@RequestMapping
+RequestMapping 어노테이션은 요청 주소 셋팅 뿐만 아니라 요청 방식도 설정할 수 있습니다.
+
+@RequestMapping(value = "/test1", method = RequestMethod.GET)
+public String test1() {
+	return "test1";
+}
+
+요청 어노테이션
+
+RequestMapping 대신 요청별로 제공되는 어노테이션을 사용할 수도 있습니다.
+@GetMapping("/test4")
+public String test4() {
+	return "test4";
+}
+
+@PostMapping("/test5")
+public String test5() {
+	return "test5";
+}
+
+
+동시에 설정하기
+
+RequestMapping은 요청 방식들을 동시에 설정할 수 있습니다.
+
+@RequestMapping(value = "/test7", method = {RequestMethod.GET, RequestMethod.POST})
+public String test7() {
+	return "test7";
+}
+ -->
+ 
+ 
+<!-- 
+ Parameter 추출하기
+-------------------------
+클라이언트 요청 발생 시 전달하는 파라미터 데이터를 손쉽게 주입 받을 수 있도록 다양한 방식을 제공하고 있습니다.
+Spring MVC는 Servlet/JSP 처럼 요청 방식에 따라 파라미터 추출하는 방식이 달라지지는 않습니다.
+
+ - HttpServletRequest 사용하기
+ 1) Spring MVC는 필요한 객체나 데이터는 주입을 받아 사용하게 됩니다.
+ 2) Servlet/JSP에서 파라미터 데이터를 추출할 때 HttpServletRequest request 객체를 통하게 되는데 
+    Spring MVC에서 이 객체를 주입 받아 사용할 수 있습니다.
+ 3) 파라미터 추출 뿐만 아니라 HttpServletRequest 객체가 필요할 경우 사용하면 됩니다.
+
+	@GetMapping("/test1")
+	public String test1(HttpServletRequest request) {
+
+	String data1 = request.getParameter("data1");
+	String data2 = request.getParameter("data2");
+	String [] data3 = request.getParameterValues("data3");
+
+				… 생략
+	}
+
+
+ - WebRequest 사용하기
+   WebRequest는 HttpServletRequest 클래스를 확장한 클래스입니다.
+ 
+  @GetMapping("/test3")
+   public String test3(WebRequest request) {
+
+   String data1 = request.getParameter("data1");
+   String data2 = request.getParameter("data2");
+   String [] data3 = request.getParameterValues("data3");
+
+   				 …생략…
+   }
+
+
+ - @PathVariable
+     데이터가 요청 주소에 있을 경우 값을 주입 받을 수 있는 어노테이션입니다.
+   Restful API 서버 프로그래밍시 많이 사용하는 방식입니다.
+            데이터1/2/3
+      요청주소/값1/값2/값3
+
+	형 변환
+	@GetMapping("/test4/{data1}/{data2}/{data3}")
+	public String test4(@PathVariable int data1, 
+					    @PathVariable int data2, 
+			 			@PathVariable int data3) {
+			 	.........
+	}
+
+- @RequestParam
+	1) 파라미터 데이터를 직접 주입 받을 수 있습니다.
+	2) 지정된 변수의 이름과 파라미터의 이름이 같을 경우 값을 주입 받습니다.
+	3) 가능한 경우 형 변환도 처리해줍니다.
+	4) value : 파라미터의 이름과 변수의 이름이 다를 경우 파라미터 이름을 지정합니다.
+	5) required : false를 설정하면 지정된 이름의 파라미터가 없을 경우 null이 주입되고, 
+		있으면 넘어온 값으로 됩니다.(문자인 경우)
+	6) (defaultValue = "0")설정하면 기본값으로 설정되고,  있으면 넘어온 값으로 됩니다. 
+		
+	@GetMapping("/test7")
+	public String test7(@RequestParam(value = "data1") String value1,
+			  @RequestParam(value = "data2", required = false) String value2,
+			  @RequestParam(value = "data3", defaultValue = "default") String value3) {
+			  
+			  ..........	
+	 }
+
+ -->

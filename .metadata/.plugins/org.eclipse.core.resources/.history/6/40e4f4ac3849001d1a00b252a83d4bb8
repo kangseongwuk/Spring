@@ -1,0 +1,7 @@
+package kr.co.ezen.beans;
+
+public class dataBean {
+	
+	private int data1;
+	private int[] data2;
+}
