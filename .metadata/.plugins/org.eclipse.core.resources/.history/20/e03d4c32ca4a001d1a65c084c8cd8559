@@ -1,0 +1,21 @@
+package kr.co.ezen.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import kr.co.ezen.beans.DataBean;
+
+@Controller
+public class TestController {
+
+	@GetMapping("/test1")
+	public String test1() {
+		
+	return "test1";
+	//	return "redirect:/sub1";
+	}
+
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WebSpringSample5_RedirectScope">
+        <property name="context-root" value="WebSpringSample5_RedirectScope"/>
+        <property name="java-output-path" value="/WebSpringSample5_RedirectScope/build/classes"/>
+    </wb-module>
+</project-modules>

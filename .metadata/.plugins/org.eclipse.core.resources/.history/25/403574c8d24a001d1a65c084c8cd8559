@@ -1,0 +1,66 @@
+package kr.co.ezen.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class TestController {
+
+	@GetMapping("/test1")
+	public String test1(HttpServletRequest request) {
+	
+		//					ObjectName , String type
+		request.setAttribute("data1", "1.문자열입니다.");
+		request.setAttribute("data2", "2.문자열입니다.");
+	
+		return "forward:/result";
+		//return "redirect:/result";
+	//return "test1";
+	}
+	
+	@GetMapping("/result")
+	public String result() {
+		return "result";
+	}
+	
+	@GetMapping("/test2")
+	public String test2(Model model) {
+		
+		//					ObjectName , String type
+		model.addAttribute("data3", "3.문자열입니다.");
+		model.addAttribute("data4", "4.문자열입니다.");
+		
+		//return "forward:/result2";
+		return "redirect:/result2";
+		//return "test1";
+	}
+	
+	@GetMapping("/result2")
+	public String result2() {
+		return "result2";
+	}
+
+	@GetMapping("/test3")
+	public ModelAndView test3(ModelAndView maView) {
+		
+		//					ObjectName , String type
+		maView.addObject("data5", "5.문자열입니다.");
+		maView.addObject("data6", "6.문자열입니다.");
+		
+		maView.setViewName("forward:/result3");
+		//maView.setViewName("redirect:/result3");
+		
+		//return "forward:/result2";
+		return maView;
+		//return "test1";
+	}
+	
+	@GetMapping("/result3")
+	public String result3() {
+		return "result3";
+	}
+}

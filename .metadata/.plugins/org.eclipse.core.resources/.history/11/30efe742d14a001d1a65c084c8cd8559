@@ -1,0 +1,45 @@
+package kr.co.ezen.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TestController {
+
+	@GetMapping("/test1")
+	public String test1(HttpServletRequest request) {
+	
+		//					ObjectName , String type
+		request.setAttribute("data1", "문자열입니다.");
+	
+		//return "forward:/result";
+		return "redirect:/result";
+	//return "test1";
+	}
+	
+	@GetMapping("/result")
+	public String result() {
+		return "result";
+	}
+	
+	@GetMapping("/test2")
+	public String test2(Model model) {
+		
+		//					ObjectName , String type
+		model.addAttribute("data3", "3.문자열입니다.");
+		model.addAttribute("data4", "4.문자열입니다.");
+		
+		//return "forward:/result2";
+		return "redirect:/result2";
+		//return "test1";
+	}
+	
+	@GetMapping("/result2")
+	public String result2() {
+		return "result2";
+	}
+
+}

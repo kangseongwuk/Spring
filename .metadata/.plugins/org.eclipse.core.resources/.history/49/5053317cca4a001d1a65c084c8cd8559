@@ -1,0 +1,20 @@
+package kr.co.ezen.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import kr.co.ezen.beans.DataBean;
+
+@Controller
+public class TestController {
+
+	@GetMapping("/test1")
+	public String test1(HttpServletRequest) {
+		
+	return "test1";
+	//	return "redirect:/sub1";
+	}
+
+}
