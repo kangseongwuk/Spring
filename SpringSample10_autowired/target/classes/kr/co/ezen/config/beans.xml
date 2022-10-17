@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+	
+	<bean id="tb1" class="kr.co.ezen.beans.TestBean" lazy-init="true">
+		<property name="data1" ref="data_bean"></property>
+		<property name="data2" ref="data_bean"></property>
+	</bean>
+							
+	<bean id="data_bean" class="kr.co.ezen.beans.DataBean" scope="prototype"/>
+	
+	<!-- byName은 singleton&prototype 둘다 적용 가능 -->
+	<bean id="tb2" class="kr.co.ezen.beans.TestBean" lazy-init="true" autowire="byName"/>
+	
+	<bean id="data1" class="kr.co.ezen.beans.DataBean" lazy-init="true"/>
+	<bean id="data2" class="kr.co.ezen.beans.DataBean" lazy-init="true"/>											
+	
+	<!-- <bean id="tb3" class="kr.co.ezen.beans.TestBean2"/> -->
+	
+	
+	<bean id="tb3" class="kr.co.ezen.beans.TestBean2" autowire="no"/>
+	
+	<bean id="obj" class="kr.co.ezen.beans.TestBean2" lazy-init="true"  autowire="byType"/>											
+											
+	<!-- 자동 주입 빈  정의-->
+	<bean  class='kr.co.ezen.beans.DataBean2' scope="prototype"/>
+	 	 
+	<!-- 동일 타입인 경우에는 여러개가 존재하면 오류 발생 그러므로 하나만 정의하여 사용하라. -->
+	 <!-- <bean class='kr.co.ezen.beans.DataBean2'/> --> 
+	 <!-- <bean class='kr.co.ezen.beans.DataBean2'/> -->
+	
+	<bean id="obj2" class="kr.co.ezen.beans.TestBean3"/>  
+	
+	<bean id="obj3" class="kr.co.ezen.beans.TestBean4">
+		<constructor-arg ref='data_bean2' index="0"/>
+		<constructor-arg ref='data_bean2' index="1"/>	
+	</bean>
+	
+	<bean id="data_bean2" class="kr.co.ezen.beans.DataBean4" scope="prototype"/>	
+	
+	<!-- 매개변수가 없이 생성자를 주입하여 객체를 생성하는 경우 -->
+	<bean id='obj5' class='kr.co.ezen.beans.TestBean4' autowire='constructor'/>
+		
+	<bean id='obj6' class='kr.co.ezen.beans.TestBean4'>
+		<constructor-arg value='12345' index='0' type='int'/>
+		<constructor-arg value='홍길동'  index='1'/>
+		<constructor-arg value="123.123" index="2"/>
+		<constructor-arg ref='data_bean2' index='3'/>
+		<constructor-arg ref='data_bean2' index='4'/>	
+	</bean>	
+		
+	<bean id='obj7' class='kr.co.ezen.beans.TestBean4' autowire='constructor'>
+		<constructor-arg value='78956' index='0' type='int'/>
+		<constructor-arg value='임성찬'  index='1'/>
+		<constructor-arg value="100.00" index="2"/>
+	</bean>	
+	
+						
+</beans>
+
+
+
+
+
