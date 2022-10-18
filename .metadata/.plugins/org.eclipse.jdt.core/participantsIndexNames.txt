@@ -11,6 +11,8 @@ D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\217740
 \WepSpringSample1_URLWapping\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1218036349.index
 \WebSpringSample3_parameter\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4083727715.index
+\WebSpringSample7_SessionScope\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2119405260.index
 \WebSpringSample5_RedirectScope\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2391642845.index
@@ -33,6 +35,8 @@ D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\237276
 \WebSpringSample1_URLWapping\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\878399512.index
 \WebSpringSample4_formCustomTag\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1100542041.index
+\WebSpringSample6_RedirectScope\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3110111554.index
 \WebSpringSample4_formCustomTag2\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2343368160.index

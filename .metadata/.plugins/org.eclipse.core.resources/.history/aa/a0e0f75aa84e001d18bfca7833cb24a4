@@ -1,0 +1,12 @@
+package kr.co.ezen.beans;
+
+
+public class TestBean4 {
+	private DataBean1 data1;
+	private DataBean2 data2;
+	private DataBean3 data3;
+	
+
+	
+	
+}

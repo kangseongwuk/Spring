@@ -1,0 +1,48 @@
+package kr.co.ezen.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import kr.co.ezen.beans.DataBean;
+
+@Controller
+public class TestController {
+
+	@GetMapping("/test1")
+	public String test1(HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		
+		session.setAttribute("data1", "문자열1");
+		session.setAttribute("data2", "문자열2");
+		
+		//                  ObjectName, String type
+//		request.setAttribute("data1", "1.문자열 입니다.");
+//		request.setAttribute("data2", "2.문자열 입니다.");
+		
+		return "test1";
+	}
+	
+	@GetMapping("/result")
+	public String result(HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		
+		//session area에 저장합니다.
+		String data1 = (String) session.getAttribute("data1");
+		String data2 = (String) session.getAttribute("data2");
+		System.out.println(data1);
+		System.out.println(data2);
+		
+		return "result";
+	}
+	
+	
+}

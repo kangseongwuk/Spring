@@ -1,0 +1,16 @@
+package kr.co.ezen.beans;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
+
+public class TestBean2 {
+
+@PostConstruct
+public void init() {
+	int sum = 100+ 300;
+	
+	System.out.println("Adder : " + sum);
+}
+}

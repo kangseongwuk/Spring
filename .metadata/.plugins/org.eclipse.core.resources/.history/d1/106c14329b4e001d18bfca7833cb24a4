@@ -1,0 +1,17 @@
+package kr.co.ezen.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+
+import kr.co.ezen.beans.TestBean;
+
+@Configuration
+public class BeanConfigClass {
+
+	@Bean(initMethod = "init1", destroyMethod = "destroy1")
+	@Lazy
+	public TestBean obj1() {
+		return new TestBean();
+	}
+}
