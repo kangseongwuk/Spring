@@ -81,6 +81,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="WebSpringSample8_SessionScopeBeanXml"/>
 			<item value="WebSpringSample5_RedirectScope"/>
 			<item value="WebSpringSample5_RedirectForward"/>
 			<item value="WebSpringSample4_formCustomTag2"/>
@@ -96,6 +97,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="WebSpringSample8_SessionScopeBeanXml"/>
 			<item value="WebSpringSample5_RedirectScope"/>
 			<item value="WebSpringSample5_RedirectForward"/>
 			<item value="WebSpringSample4_formCustomTag2"/>

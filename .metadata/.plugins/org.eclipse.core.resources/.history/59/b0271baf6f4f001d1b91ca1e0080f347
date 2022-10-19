@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	   					   
+		   <bean id="sessionBean" class="kr.co.ezen.beans.DataBean" scope="session"></bean>
+		   <bean id="sessionBean2" class="kr.co.ezen.beans.DataBean2" scope="session"></bean>
+		   <bean id="sessionBean3" class="kr.co.ezen.beans.DataBean3" scope="prototype"></bean>
+		   <bean id="sessionBean4" class="kr.co.ezen.beans.DataBean4" scope="prototype"></bean>
+	   					   
+</beans>
+
+<!-- 자바에서  kr.co.ezen.config / RootAppContext와 같은 역할이다.-->

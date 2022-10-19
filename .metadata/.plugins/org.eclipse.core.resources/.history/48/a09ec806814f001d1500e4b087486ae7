@@ -1,0 +1,23 @@
+package kr.co.ezen.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+
+public class TestController{
+	
+	@Autowired //자동주입
+	ReloadableResourceBundleMessageSource res;
+	
+	@GetMapping("/test1")
+	public String test1() {		
+	
+		return "test1";
+	}
+	
+	
+}

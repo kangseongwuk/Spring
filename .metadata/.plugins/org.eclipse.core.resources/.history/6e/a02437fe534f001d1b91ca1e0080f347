@@ -1,0 +1,17 @@
+package kr.co.ezen.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import kr.co.ezen.beans.DataBean;
+
+
+@Configuration
+public class RootAppContext {
+	
+	@Bean
+	public DataBean dataBean() {
+		return new DataBean();
+	}
+	
+}

@@ -1,0 +1,43 @@
+package kr.co.ezen.controller;
+
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+@PropertySource("/WEB-INF/Properties/data1.Properties")
+public class TestController {
+
+	@Value("${aaa.a1")
+	private int a1; //100
+	
+	@Value("${aaa.a2")
+	private String a2; //안녕하세요?
+	
+	@Value("${bbb.b1")
+	private int b1; //200
+	
+	@Value("${bbb.b2")
+	private String b2; //반가워요
+	
+	@GetMapping("/test1")
+	public String test1() {
+		
+		System.out.println(a1);
+		System.out.println(a2);
+		System.out.println(b1);
+		System.out.println(b2);
+		
+		return "test1";
+	}
+	
+	@GetMapping("/result")
+	public String result() {
+		
+		return "result";
+	}
+
+}
