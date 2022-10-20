@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>input_data</h1>
+	<form action="input_pro" method="post">
+		아이디: <input type="text" name="id"/><br>
+			  <spring:hasBindErrors name="dataBean">
+				<c:if test="${errors.hasFieldErrors('id')}">
+					<strong>${errors.getFieldError('id').defaultMessage }</strong><br/>
+				</c:if>
+			  </spring:hasBindErrors>
+		이름: <input type="text" name="strname"/><br>
+			  <spring:hasBindErrors name="dataBean">
+				<c:if test="${errors.hasFieldErrors('strname')}">
+					<strong>${errors.getFieldError('strname').defaultMessage }</strong><br/>
+				</c:if>
+			  </spring:hasBindErrors>
+		나이: <input type="text" name="age"/><br>
+			  <spring:hasBindErrors name="dataBean">
+				<c:if test="${errors.hasFieldErrors('age')}">
+					<strong>${errors.getFieldError('age').defaultMessage }</strong><br/>
+				</c:if>
+			  </spring:hasBindErrors>
+		<button type="submit">Validation Check</button>
+	</form>
+</body>
+</html>

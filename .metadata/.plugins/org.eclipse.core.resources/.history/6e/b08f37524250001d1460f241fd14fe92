@@ -1,0 +1,24 @@
+package kr.co.ezen.beans;
+
+import javax.validation.constraints.AssertFalse;
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
+
+public class DataBean {
+
+	@AssertTrue
+	private boolean data1;
+	@AssertFalse
+	private boolean data2;
+
+	public boolean isData1() {
+		return data1;
+	}
+
+	public void setData1(boolean data1) {
+		this.data1 = data1;
+	}
+
+
+}
