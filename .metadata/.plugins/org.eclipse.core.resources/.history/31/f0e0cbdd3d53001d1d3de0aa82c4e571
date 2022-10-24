@@ -1,0 +1,15 @@
+package kr.co.ezen.beans;
+
+
+public class TestBean {
+	
+	public TestBean() {
+		System.out.println("TestBean class의 생성자 입니다.1순위");
+	}
+	
+	public int method1() {
+		System.out.println("method1 Call 입니다.3순위 예외 발생 여부에 관계없이 호출된 메소드의 동작이 완료되면 동작하는 Advice");
+		
+		return 0;
+	}
+}

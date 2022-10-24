@@ -1,0 +1,7 @@
+package kr.co.ezen.advisor;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class AdvisorClass {
+
+}

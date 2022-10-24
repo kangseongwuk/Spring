@@ -1,0 +1,14 @@
+package kr.co.ezen.advisor;
+
+public class AdvisorClass {
+
+	public void beforeMethod() {
+		System.out.println("beforeMethod를 호출했다. 2순위");
+	}
+	public void afterMethod() {
+		System.out.println("afterMethod를 호출했다.예외 발생 여부에 관계없이 호출된 메소드의 동작이 완료되면 동작하는 Advice 후순위");
+	}
+	public void aroundMethod() {
+		System.out.println("aroundMethod를 호출했다.메소드 호출 전과 후에 동작하는 Advice");
+	}
+}

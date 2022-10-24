@@ -1,0 +1,11 @@
+package kr.co.ezen.advisor;
+
+public class AdvisorClass {
+
+	public void beforeMethod() {
+		System.out.println("beforeMethod를 호출했다. 2순위");
+	}
+	public void afterMethod() {
+		System.out.println("beforeMethod를 호출했다. 2순위");
+	}
+}

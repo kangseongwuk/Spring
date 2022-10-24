@@ -1,0 +1,10 @@
+package kr.co.ezen.main;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+//XML 설정과 같은 동작을 하는 클래스
+@Configuration
+@Component(basePackages = {"kr.co.ezen.beans"})
+public class BeanConfigClass {
+}

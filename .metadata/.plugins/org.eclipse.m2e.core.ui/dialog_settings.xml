@@ -81,6 +81,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="SpringMiniProject"/>
 			<item value="WebSpringSample8_SessionScopeBeanXml"/>
 			<item value="WebSpringSample5_RedirectScope"/>
 			<item value="WebSpringSample5_RedirectForward"/>
@@ -97,6 +98,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="SpringMiniProject"/>
 			<item value="WebSpringSample8_SessionScopeBeanXml"/>
 			<item value="WebSpringSample5_RedirectScope"/>
 			<item value="WebSpringSample5_RedirectForward"/>

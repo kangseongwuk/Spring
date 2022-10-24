@@ -5,6 +5,8 @@ D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\860069
 \WebSpringSample2_GetPost\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2560126524.index
 \WebSpringSample2_GetPost\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1634025319.index
+\SpringMiniProject\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2177403079.index
 \WepSpringSample1_URLWapping\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\222625556.index
@@ -29,6 +31,8 @@ D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\234336
 \webSpringSample1_URLmapping\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2391642845.index
 \WebSpringSample1_URLWapping\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2221723745.index
+\SpringMiniProject\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1746812458.index
 \WebSpringSample14_ValidationCheck2\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\934294141.index
@@ -43,6 +47,8 @@ D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\288458
 \WebSpringSample2_GetPost\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1609691359.index
 \WebSpringSample10_PropertiesBeanXml\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3950904551.index
+\SpringMiniProject\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2119405260.index
 \WebSpringSample5_RedirectScope\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4083727715.index
@@ -51,12 +57,14 @@ D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\878399
 \WebSpringSample4_formCustomTag\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1218036349.index
 \WebSpringSample3_parameter\src\main\java
-D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\235277841.index
-\WebSpringSample2_GetPost\src\main\java
-D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2057488374.index
-\WebSpringSample11_MessageProperties\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2568755201.index
+\SpringMiniProject\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3732546514.index
 \WebSpringSample15_JSR-303MessageCustomizing\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2057488374.index
+\WebSpringSample11_MessageProperties\src\main\java
+D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\235277841.index
+\WebSpringSample2_GetPost\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3364680727.index
 \WebSpringSample8_SessionScopeBeanXml\src\main\java
 D:\Spring-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2184898803.index

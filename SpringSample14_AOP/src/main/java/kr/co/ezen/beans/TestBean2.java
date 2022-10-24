@@ -1,0 +1,38 @@
+package kr.co.ezen.beans;
+
+
+public class TestBean2 {
+
+	public TestBean2() {
+		System.out.println("TestBean2 class의 생성자입니다");
+	}
+	
+	public int method2() {
+		System.out.println("method2 Call 입니다");
+		
+		return 40000;
+	}
+	
+	public void beforeMethod2() {
+		System.out.println("beforeMethod2를 불러왔습니다.");
+		System.out.println("생성자 다음에, method()메소드 이전에 실행합니다.");
+	}
+	
+	public int method3(int x ) {
+		int sum = x*x;
+		
+		return sum;
+		
+	}
+	
+	public void method4(int x, String str ) {
+		String sum = x+str;
+		
+		System.out.println(sum);
+	}
+	public void method5(double x, int y ) {
+		double sum = x / y;
+		
+		System.out.println(sum);
+	}
+}

@@ -1,0 +1,20 @@
+package kr.co.ezen.beans;
+
+
+public class TestBean {
+	
+	public TestBean() {
+		System.out.println("TestBean class의 생성자 입니다.1순위");
+	}
+	
+	public int method1() {
+		System.out.println("method1 Call 입니다.3순위 ");
+		
+		return 20000;
+	}
+	
+	public void method3(int x ) {
+		int sum = x*x;
+		System.out.println("곱셈결과 : " + sum);
+	}
+}
