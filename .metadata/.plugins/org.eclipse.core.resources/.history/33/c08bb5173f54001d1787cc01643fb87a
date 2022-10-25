@@ -1,0 +1,14 @@
+Size.joinUserBean.user_name = 사용자이름은 2~30이어야 합니다.
+Size.joinUserBean.user_id = 아이디는 8~15 글자 이어야 합니다.
+Size.joinUserBean.user_pw = 아이디는 8~15 글자 이어야 합니다.
+Size.joinUserBean.user_pw2 = 아이디는 8~15 글자 이어야 합니다.
+
+
+
+
+
+
+Pattern.joinUserBean.user_name = 사용자이름은 한글을 허용합니다.(regexp = "[가-힣]*")
+Pattern.joinUserBean.user_id = 아이디는 영문 대소문자, 숫자를 사용합니다.
+Pattern.joinUserBean.user_pw = 패스워드는 영문 대소문자, 숫자를 사용합니다.
+Pattern.joinUserBean.user_pw2 = 패스워드는 영문 대소문자, 숫자를 사용합니다.

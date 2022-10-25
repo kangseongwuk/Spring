@@ -1,0 +1,12 @@
+package kr.co.ezen.interceptor;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+import kr.co.ezen.service.TopMenuService;
+
+public class TopMenuInterceptor implements HandlerInterceptor{
+	
+	@Autowired
+	private TopMenuService topMenuService;
+}

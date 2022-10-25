@@ -1,0 +1,14 @@
+Size.joinUserBean.user_name = 사용자이름은 2~30이어야 합니다.
+Size.joinUserBean.user_id = 
+Size.joinUserBean.user_pw = 
+Size.joinUserBean.user_pw2 = 
+
+
+
+
+
+
+Pattern.joinUserBean.user_name = 사용자이름은 한글을 허용합니다.(regexp = "[가-힣]*")
+Pattern.joinUserBean.user_id = 
+Pattern.joinUserBean.user_pw = 
+Pattern.joinUserBean.user_pw2 = 

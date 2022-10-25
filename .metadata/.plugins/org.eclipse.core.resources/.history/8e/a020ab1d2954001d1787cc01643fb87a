@@ -1,0 +1,29 @@
+package kr.co.ezen.interceptor;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+import kr.co.ezen.beans.BoardInfoBean;
+import kr.co.ezen.service.TopMenuService;
+
+//4개의 게시판 메뉴가 있는데, 상단 메뉴로서 어떠한 주소가 요청하여도 다 동작해야 하므로
+//인터셉트로 구현하면 한번에 처리가 가능합니다.
+
+public class TopMenuInterceptor implements HandlerInterceptor{
+	
+	@Autowired
+	private TopMenuService topMenuService;
+	
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+		List<BoardInfoBean> topMenuList = topMenuService.getTopMenuList();
+		
+		request.setAttribute("topMenuService", topMenuList);
+		
+		return HandlerInterceptor.super.preHandle(request, response, handler);
+	}
+}

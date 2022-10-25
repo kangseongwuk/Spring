@@ -1,0 +1,52 @@
+package kr.co.ezen.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+//Controller 
+@EnableWebMvc
+@ComponentScan("kr.co.ezen.controller")
+@PropertySource("/WEB-INF/properties/db.properties")
+public class ServletAppContext implements WebMvcConfigurer{
+	
+	@Value("${ db.classname} ") //oracle.jdbc.OracleDriver
+	@Value("${db.url}") //jdbc:oracle:this:@localhost:1521:xe
+	@Value("${db.username}") // kang3
+	@Value("${db.password}")// 1234
+	
+	
+	
+	// Controller.
+	@Override
+	public void configureViewResolvers(ViewResolverRegistry registry) {
+		// TODO Auto-generated method stub
+		WebMvcConfigurer.super.configureViewResolvers(registry);
+		registry.jsp("/WEB-INF/views/", ".jsp");
+	}	
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		// TODO Auto-generated method stub
+		WebMvcConfigurer.super.addResourceHandlers(registry);
+		registry.addResourceHandler("/**").addResourceLocations("/resources/");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

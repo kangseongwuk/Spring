@@ -1,0 +1,12 @@
+package kr.co.ezen.beans;
+
+// content_table ckawh
+public class ContentDataBean {
+	
+	private int content_idx;
+	private String content_subject;
+	private String content_text;
+	private int content_write_idx;
+	private int content_board_dix;
+	private String content_date;
+}
