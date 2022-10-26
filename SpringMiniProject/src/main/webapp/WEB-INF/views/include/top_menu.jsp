@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
-<c:url var='root' value='/'/>    
+<c:url var='root' value='/'/>  
+<!-- 세션에 대한 문자열이 없이(따라붙지 않고) 사용 합니다. 
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
+  -->
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +23,15 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navMenu">
 		<ul class="navbar-nav">
-			<li class="nav-item">
+			<c:forEach var="obj" items="${topMenuList }"> 
+				<li class="nav-item">
+					<a href="${root }board/main?board_info_idx=${obj.board_info_idx}" 
+									class="nav-link">${obj.board_info_name}</a>
+				</li>			
+			</c:forEach>
+		
+		
+			<%-- <li class="nav-item">
 				<a href="${root }board/main" class="nav-link">자바게시판</a>
 			</li>
 			<li class="nav-item">
@@ -30,7 +42,7 @@
 			</li>
 			<li class="nav-item">
 				<a href="${root }board/main" class="nav-link">DataBase게시판</a>
-			</li>
+			</li> --%>
 		</ul>
 		
 		<ul class="navbar-nav ml-auto">
@@ -41,7 +53,7 @@
 				<a href="${root }user/join" class="nav-link">회원가입</a>
 			</li>
 			<li class="nav-item">
-				<a href="${root }user/modify_user" class="nav-link">정보수정</a>
+				<a href="${root }user/modify" class="nav-link">정보수정</a>
 			</li>
 			<li class="nav-item">
 				<a href="${root }user/logout" class="nav-link">로그아웃</a>

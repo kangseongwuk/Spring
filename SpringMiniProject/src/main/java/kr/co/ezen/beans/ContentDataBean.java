@@ -1,14 +1,15 @@
 package kr.co.ezen.beans;
 
+// content_table 참조
 public class ContentDataBean {
+
 	private int content_idx;
 	private String content_subject;
 	private String content_text;
 	private String content_file;
 	private int content_write_idx;
-	private int content_board_idx;
-	private String content_dateDate;
-	
+	private int content_board_idx;		       
+	private String content_date;
 	
 	public int getContent_idx() {
 		return content_idx;
@@ -46,10 +47,15 @@ public class ContentDataBean {
 	public void setContent_board_idx(int content_board_idx) {
 		this.content_board_idx = content_board_idx;
 	}
-	public String getContent_dateDate() {
-		return content_dateDate;
+	public String getContent_date() {
+		return content_date;
 	}
-	public void setContent_dateDate(String content_dateDate) {
-		this.content_dateDate = content_dateDate;
+	public void setContent_date(String content_date) {
+		this.content_date = content_date;
 	}
+	
+	
+	
+	
+	
 }

@@ -35,33 +35,33 @@
 						<tbody>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 						</tbody>
 					</table>
 					
-					<a href="${root}board/main" class="btn btn-primary">더보기</a>
+					<a href="${root }board/main" class="btn btn-primary">더보기</a>
 				</div>
 			</div>
 		</div>
@@ -80,33 +80,33 @@
 						<tbody>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 						</tbody>
 					</table>
 					
-					<a href="${root}board/main" class="btn btn-primary">더보기</a>
+					<a href="${root }board/main" class="btn btn-primary">더보기</a>
 				</div>
 			</div>
 		
@@ -126,33 +126,33 @@
 						<tbody>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 						</tbody>
 					</table>
 					
-					<a href="${root}board/main" class="btn btn-primary">더보기</a>
+					<a href="${root }board/main" class="btn btn-primary">더보기</a>
 				</div>
 			</div>
 		</div>
@@ -171,33 +171,33 @@
 						<tbody>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 							<tr>
 								<td class="text-center">5</td>
-								<th><a href='${root }board/read'>제목입니다</a></th>
+								<th><a href='board_read.html'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2019-12-15</td>
 							</tr>
 						</tbody>
 					</table>
 					
-					<a href="${root}board/main" class="btn btn-primary">더보기</a>
+					<a href="${root }board/main" class="btn btn-primary">더보기</a>
 				</div>
 			</div>
 		</div>

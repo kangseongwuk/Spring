@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
-<c:url var='root' value='/'/>
-<!-- 세션에 대한 문자열이 없이(따라붙지 않고) 사용 합니다. -->
-<!-- <c:set var='root' value="${pageContext.request.contextPath}/"/>  위에 url이 안될경우 가능한 방법--> 
+<c:url var='root' value='/'/>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -161,7 +159,7 @@
 			</div>
 			
 			<div class="text-right">
-				<a href="${root }/board/write" class="btn btn-primary">글쓰기</a>
+				<a href="${root}board/write" class="btn btn-primary">글쓰기</a>
 			</div>
 			
 		</div>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
-<c:url var='root' value='/'/>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
+<c:url var='root' value='/'/>       
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		alert("로그아웃이 완료되었습니다.")
+		alert("로그아웃이 되었습니다.")
 		location.href='${root}index'
 	</script>
 </body>

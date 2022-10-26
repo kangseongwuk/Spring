@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:url var='root' value='/'/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
+<c:url var='root' value='/'/>     
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,14 +16,15 @@
 
 </head>
 <body>
-<c:import url="/WEB-INF/views/include/top_menu.jsp"/>	
+<c:import url="/WEB-INF/views/include/top_menu.jsp"/>
+
 <div class="container" style="margin-top:100px">
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form action="${root }index" method="post">
+					<form action="${root}user/modify" method="get">
 					<div class="form-group">
 						<label for="user_name">이름</label>
 						<input type="text" id="user_name" name="user_name" class="form-control" value="홍길동" disabled="disabled"/>
@@ -54,5 +55,6 @@
 	</div>
 </div>
 <c:import url="/WEB-INF/views/include/footer_menu.jsp"/>
+
 </body>
 </html>

@@ -9,8 +9,8 @@
 </head>
 <body>
 	<script type="text/javascript">
-		alert("회원 가입이 정상적으로 완료되었습니다.")
-		location.href="${root}user/login"
+		alert("로그인이 정상적으로 완료되었습니다.")
+		location.href="${root}index"
 	</script>
 </body>
 </html>

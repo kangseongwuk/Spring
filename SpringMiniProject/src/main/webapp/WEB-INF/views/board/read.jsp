@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
-<c:url var='root' value='/'/>  
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>       
+<c:url var='root' value='/'/>      
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	
 <c:import url="/WEB-INF/views/include/top_menu.jsp"/>
 
 <div class="container" style="margin-top:100px">
@@ -57,8 +56,6 @@
 		<div class="col-sm-3"></div>
 	</div>
 </div>
-
 <c:import url="/WEB-INF/views/include/footer_menu.jsp"/>
-
 </body>
 </html>

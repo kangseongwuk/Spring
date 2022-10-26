@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import kr.co.ezen.beans.BoardInfoBean;
 import kr.co.ezen.mapper.TopMenuMapper;
 
-//TopMenuMapper클래스의 getTopMenuList()를 호출하여 쿼리문을 실행하는 역할을 하는 클래스인데,
-// 이를 명시적으로 표현해 주는 부분.
+//TopmenuMapper클래스의 getTopMenuList()를 호출하여 쿼리문을 실행하는 역할을 하는 
+// 클래스인데, 이를 명시적으로 표현해 주는 부분.
 @Repository
 public class TopMenuDAO {
 	
@@ -23,4 +23,5 @@ public class TopMenuDAO {
 		return topMenuList;
 		
 	}
+	
 }
