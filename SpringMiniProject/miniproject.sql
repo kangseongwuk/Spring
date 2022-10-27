@@ -62,6 +62,8 @@ insert into user_table values(1, '강성욱', 'kang1014', '12341234');
    		where user_id='kang1014' and user_pw='12345678';
    		
 
-  commit;
-
+--modify : 로그인 정보 확인
+select user_id, user_name
+	from USER_TABL
+		where user_idx = '2';
 commit;

@@ -1,5 +1,7 @@
 package kr.co.ezen.config;
 
+import javax.annotation.Resource;
+
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -19,6 +21,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import kr.co.ezen.beans.UserDataBean;
+import kr.co.ezen.interceptor.CheckLoginInterceptor;
 import kr.co.ezen.interceptor.TopMenuInterceptor;
 import kr.co.ezen.mapper.BoardMapper;
 import kr.co.ezen.mapper.TopMenuMapper;
@@ -46,8 +50,12 @@ public class ServletAppContext implements WebMvcConfigurer{
 	@Value("${db.password}") // 1234
 	private String db_password;
 	
-	@Autowired
+	@Autowired //call by Type
 	private TopMenuService topMenuService;
+	
+	@Autowired
+	private UserDataBean loginUserDataBean;
+	
 	
 	// Controller.
 	@Override
@@ -103,10 +111,11 @@ public class ServletAppContext implements WebMvcConfigurer{
 	//TopMenuMapper 등록
 	@Bean
 	public MapperFactoryBean<TopMenuMapper> getTopMenuList(SqlSessionFactory factory){
-		MapperFactoryBean<TopMenuMapper> factoryBean = new MapperFactoryBean<TopMenuMapper>(TopMenuMapper.class);
+		MapperFactoryBean<TopMenuMapper> factoryBean = 
+				new MapperFactoryBean<TopMenuMapper>(TopMenuMapper.class);
 		
 		factoryBean.setSqlSessionFactory(factory); 
-		
+				
 		return factoryBean;		
 	}
 	
@@ -129,13 +138,21 @@ public class ServletAppContext implements WebMvcConfigurer{
 	
 	public void addInterceptors(InterceptorRegistry registry) {
 		
-		WebMvcConfigurer.super.addInterceptors(registry);
+		WebMvcConfigurer.super.addInterceptors(registry);	
 		
-		TopMenuInterceptor topMenuInterceptor = new TopMenuInterceptor(topMenuService);
-		
+		TopMenuInterceptor topMenuInterceptor = new TopMenuInterceptor(topMenuService, loginUserDataBean);		
 		InterceptorRegistration registration1 = registry.addInterceptor(topMenuInterceptor);
 			
 		registration1.addPathPatterns("/**");		
+		
+		//CheckLoginInterceptor 등록 : 정보수정, 로그아웃
+		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginUserDataBean);
+		
+		InterceptorRegistration registration2 = registry.addInterceptor(checkLoginInterceptor);
+		
+		registration2.addPathPatterns("/user/modify", "/user/logout", "/board/*");// 인터셉서 통과하도록 유도
+		registration2.excludePathPatterns("/board/main"); // 인터셉터 제외
+		
 	}
 	
 	// 두개의 서로다른 properties 설정이 충돌나지 않도록 합니다.

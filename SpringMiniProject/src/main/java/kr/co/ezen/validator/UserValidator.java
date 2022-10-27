@@ -18,18 +18,24 @@ public class UserValidator implements Validator{
 	public void validate(Object target, Errors errors) {
 		UserDataBean userDataBean = (UserDataBean) target;
 		
-		if(userDataBean.getUser_pw().equals(userDataBean.getUser_pw2()) == false) {
-			errors.rejectValue("user_pw", "NotEquals"); 
-			errors.rejectValue("user_pw2", "NotEquals"); 
-		}
+		String beanName = errors.getObjectName();
 		
-		if(userDataBean.isUserIdExist() == false) {
-			errors.rejectValue("user_id", "DontCheckUserIdExist");
-		}
-		
-		
-	}
+		//로그인시에 체크하므로 loginUserDataBean이므로 아래 내용을 실행하지 않고 통과합니다.
+		if(beanName.equals("joinUserDataBean") || beanName.equals("modifyUserDataBean")) {
+			// 회원가입시에 패스워드 체크에 사용한 부분
+			if(userDataBean.getUser_pw().equals(userDataBean.getUser_pw2()) == false) {
+				errors.rejectValue("user_pw", "NotEquals"); 
+				errors.rejectValue("user_pw2", "NotEquals"); 
+			}
 
+		// 아이디 중복 확인 체크
+		if(beanName.equals("joinUserDataBean")) {
+			if(userDataBean.isUserIdExist() == false) {
+				errors.rejectValue("user_id", "DontCheckUserIdExist");
+			}
+		}
+	}
+	}
 	
 }
 

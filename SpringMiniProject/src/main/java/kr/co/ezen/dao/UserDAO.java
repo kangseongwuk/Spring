@@ -21,9 +21,27 @@ public class UserDAO {
 		
 		userMapper.addUserInfo(joinUserDataBean); 
 	}
-	//
-	public UserDataBean  getloginUserInfo(UserDataBean loginUserDataBean) {
+	//로그인 정보
+	public UserDataBean  getloginUserInfo(UserDataBean tempUserDataBean) {
 		
-		return userMapper.getloginUserInfo(loginUserDataBean);
+		return userMapper.getloginUserInfo(tempUserDataBean);
 	}
+	
+	// 수정 할 정보
+	public UserDataBean getModifyUserInfo(int user_idx) {				
+		return userMapper.getModifyUserInfo(user_idx); 		
+	}
+	
+	// 비번 수정
+	public void modifyUserInfo(UserDataBean modifyUserDataBean) {
+		userMapper.modifyUserInfo(modifyUserDataBean);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }

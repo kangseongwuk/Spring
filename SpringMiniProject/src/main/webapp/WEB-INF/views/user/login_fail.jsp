@@ -9,8 +9,8 @@
 </head>
 <body>
 	<script type="text/javascript">
-		alert("로그인을 성공 하였습니다.")
-		location.href="${root}index"
+		alert("로그인을 실패 하였습니다.")
+		location.href="${root}user/login?fail=true"
 	</script>
 </body>
 </html>
