@@ -2,9 +2,11 @@ package kr.co.ezen.config;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
+import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
+import javax.servlet.ServletRegistration.Dynamic;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -72,6 +74,16 @@ public class SpringConfigClass extends AbstractAnnotationConfigDispatcherServlet
 		encodingFilter.setEncoding("UTF-8");
 		return new Filter[] {encodingFilter};
 	}
+	
+	@Override
+	protected void customizeRegistration(Dynamic registration) {
+		super.customizeRegistration(registration);
+		
+		//																	5MB 사이즈의 크기를 지닌 이미지 저장
+		MultipartConfigElement configElement = new MultipartConfigElement(null, 1024*1024*5, 1024*1024*10, 0);
+		registration.setMultipartConfig(configElement); 
+	}
+	
 }
 
 

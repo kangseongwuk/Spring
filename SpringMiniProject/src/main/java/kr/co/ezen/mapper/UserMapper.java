@@ -24,10 +24,6 @@ public interface UserMapper {
 			
 	@Update("update user_table set user_pw = #{user_pw} where user_idx = #{user_idx}")
 		void modifyUserInfo(UserDataBean modifyUserDataBean);
-	
-	
-	
-	
-	
+		
 	
 }

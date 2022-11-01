@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -129,10 +130,7 @@ public class ServletAppContext implements WebMvcConfigurer{
 			
 			return factoryBean;		
 		}
-	
-	
-	
-	
+		
 	// Secure Coding
 	// 모든 요청 주소는 무조건 인터셉터를 통과하도록 해야 합니다.(/**) 
 	
@@ -170,6 +168,15 @@ public class ServletAppContext implements WebMvcConfigurer{
 		
 		return res; 
 	}	
+	
+	// 스탠다드서블릿멀티파트리졸버 등록 (upload/download 용도)
+	@Bean
+	public StandardServletMultipartResolver multipartResolver() {
+		
+		return new StandardServletMultipartResolver();
+	}
+	
+	
 }
 
 
